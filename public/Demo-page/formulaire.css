@@ -1,0 +1,669 @@
+/* ============== FORM ================ */
+
+/* ------------ active form ----------- */
+
+
+/* ----------------- page farany form -------------------- */
+
+/* ---------------- pre-info ---------------- */
+.pre-info {
+  /* border: 1px solid cyan; */
+  width: 95%;
+  min-height: 4rem;
+  margin: 10px;
+}
+
+.pre-info div {
+  width: 100%;
+  height: 3rem;
+  border-bottom: 1px solid gray;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.pre-info i {
+  color: var(--orange);
+  margin: 10px;
+}
+
+.pre-info p {
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #06001a;
+  padding-bottom: 16px;
+}
+
+
+/* ---------------- pre-info ---------------- */
+
+
+/* ------------ Menu deroulant ------------ */
+
+.menu-deroulant {
+  width: 100%;
+  padding: 10px;
+}
+
+
+
+.vscomp-toggle-button {
+  border-radius: 5px;
+}
+
+.menu-deroulant label{
+  font-size: 15px;
+  font-weight: 600;
+  color: #06001a;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.menu-deroulant select {
+  width: 100%;
+}
+
+/* =========================== VAOVA0 CKECK ========================= */
+
+
+/* .container{
+  position: relative;
+  max-width: 320px;
+  width: 100%;
+  margin: 80px auto 30px;
+} */
+
+.menu-deroulant .container {
+  max-width: 100%;
+  width: 100% !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  background: transparent;
+  position: relative;
+}
+
+
+.select-btn{
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #fcfeff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.select-btn .btn-text{
+  /* height: 40px; */
+  width: 100%;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+}
+.select-btn .arrow-dwn{
+  display: flex;
+  height: 21px;
+  width: 21px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 50%;
+  background: var(--orange);
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.select-btn.open .arrow-dwn{
+  transform: rotate(-180deg);
+}
+.list-items{
+  position: absolute;
+  margin-top: 5px;
+  width: 100%;
+  max-height: 180px;
+  overflow: auto;
+  border-radius: 8px;
+  padding: 14px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  /* display: none; */
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s ease;
+}
+.select-btn.open ~ .list-items{
+  /* display: block; */
+  opacity: 1;
+  pointer-events: all;
+
+}
+.list-items .item{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 0 15px;
+  border-radius: 8px;
+}
+.list-items .item:hover{
+  background-color: #e7edfe;
+}
+.item .item-text{
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+.item .checkbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16px;
+  width: 16px;
+  border-radius: 4px;
+  margin-right: 12px;
+  border: 1.5px solid #c0c0c0;
+  transition: all 0.3s ease-in-out;
+}
+.item.checked .checkbox{
+  background-color: #4070f4;
+  border-color: #4070f4;
+}
+.checkbox .check-icon{
+  color: #fff;
+  font-size: 11px;
+  transform: scale(0);
+  transition: all 0.2s ease-in-out;
+}
+.item.checked .check-icon{
+  transform: scale(1);
+}
+
+/* =========================== VAOVA0 CKECK ========================= */
+
+
+/* ------------ Menu deroulant ------------ */
+
+
+/* ---------------check-------------- */
+
+.check {
+  margin: 10px;
+}
+
+.check label {
+  font-weight: 600;
+  color: #06001a;
+
+}
+
+/* ---------------check-------------- */
+
+
+
+/* ----------------- page farany form -------------------- */
+.next-prev-form {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.next-prev-form button {
+  padding: 7px 15px 7px 15px;
+  outline: none;
+  /* box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px #fff; */
+  box-shadow:  6px 6px 6px #cbced1,  -6px -6px 6px #fff;
+  /* border: 1px solid #888888; */
+  border: none;
+  color: #06001a;
+  border-radius: 7px;
+  transition: all .3s;
+  font-size: 18px;
+
+}
+
+.next-prev-form button:hover {
+  background-color: #06001a;
+  color: #fff;
+}
+
+.next-prev-form button:active {
+  background-color: #fff;
+  box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px #fff;
+  color: #06001a;
+}
+.close-btn {
+  background: var(--orange);
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 35px;
+}
+
+.close-btn i {
+  padding: 10px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.corps.none {
+  pointer-events: none;
+}
+
+#form.active .modal-box {
+  opacity: 1;
+  pointer-events: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background: rgba(0, 0, 0, 0.3); */
+}
+
+#form.active {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+#form.active .overlay {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+}
+
+.button_intrested_start {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+
+.button_intrested_rigth {
+  width: 100%;
+}
+
+.show-modal {
+  margin-top: 1rem;
+  border: none;
+  outline: none;
+  padding: 10px 50px 10px 50px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: var(--orange);
+  transition: .6s ease;
+  color: #fff;
+}
+
+.show-modal:hover {
+  cursor: pointer;
+  background-color: #06001a;
+  transform: scale(1.1);
+}
+
+.show-modal:active {
+  transform: scale(1);
+}
+
+/* ------------ active form ----------- */
+
+/* // ------------------ Formulaire Slide ------------------- */
+.card {
+  animation: fade 250ms ease-in-out forwards;
+}
+
+.card.active {
+  animation: slide 250ms 125ms ease-in-out both;
+}
+
+/* .multi-step-form {
+  overflow: hidden;
+  position: relative;
+} */
+
+/* .hide { 
+  display: none;
+}  */
+
+@keyframes slide {
+  0% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(.75);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+/* // ------------------ Formulaire Slide ------------------- */
+
+#form {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 100px;
+  z-index: 10000000;
+  background: transparent;
+  position: fixed;
+  pointer-events: none;
+}
+
+.modal-box {
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.login-div {
+  /* overflow: hidden; */
+  position: relative;
+  margin: 5rem;
+  width: 430px;
+  min-height: 400px;
+  padding: 60Px 35px 35px 35px;
+  border-radius: 40px;
+  background-color: #ecf0f3;
+  box-shadow: 0 0 14px 5px rgb(36, 36, 36);;
+  /* box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff; */
+}
+
+.logo__form {
+  background: url(./images/Logo_Euro.png);
+  background-position: center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  cursor: pointer;
+  /* box-shadow: 0 0 2px #5f5f5f, 0 0 0 5px #ecf0f3, 8px 8px 15px #a7aaaf, -8px -8px 15px #fff; */
+}
+
+
+.title__form {
+  text-align: center;
+  font-size: 28px;
+  color: #06001a9b;
+  font-weight: bold;
+  margin-top: 10px;
+  letter-spacing: .5px;
+}
+
+.fields {
+  width: 100%;
+  padding: 10px 5px 5px 5px;
+  margin-top: 4rem;
+}
+
+.fields input {
+  width: 270px;
+  border: 1px solid red;
+  border: none;
+  outline: none;
+
+  background: none;
+  font-size: 18px;
+  color: #555;
+  padding: 20px 10px 20px 5px;
+}
+
+.username {
+  /* margin-bottom: 30px; */
+  border-radius: 15px;
+  box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px #fff;
+  /* box-shadow: 4px 4px 8px #ff1e1e, -4px -4px 8px #ff0000; */
+}
+
+.fields i {
+  color: #555;
+  margin: 0 10px -3px 25px;
+}
+
+.form-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 15px;
+  color: #fff;
+  margin: 0 auto;
+  background-color: #06001a;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
+  transition: all 0.5s;
+}
+
+.buttons {
+  margin: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.signin-button:hover {
+  background-color: var(--orange);
+}
+.signin-button:active {
+  background-color: #06001a;
+  transform: scale(0.9);
+}
+
+#form .error {
+  padding-top: 3px;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  color: rgb(255, 21, 0);
+  font-weight: 700;
+  font-size: 1rem;
+  /* border: 1px solid green; */
+}
+
+#form p {
+  padding-top: 15px;
+  text-align: center;
+} 
+
+#form p a {
+  font-weight: 700;
+  color: var(--orange);
+  transition: all .3s;
+  text-decoration: underline;
+  padding-left: 5px;
+}
+
+#form p a:hover {
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #06001a;
+  cursor: pointer;
+}
+
+
+#form .login-form {
+  display: none;
+  pointer-events: none;
+}
+
+#form .login-form.visible {
+  display: block;
+}
+
+#form .register-form.invisible {
+  display: none;
+}
+
+/* #form .overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: auto;
+} */
+
+
+/* ================ RESPONSIVE =============== */
+ 
+.desabledBtn {
+  background-color: lightgray;
+  pointer-events: none;
+}
+
+p.errorNotChecked,
+.notSelectedProduit {
+  text-align: center;
+  font-weight: 700;
+  color: red;
+  display: none;
+}
+
+p.errorNotChecked.error{
+  display: block;
+}
+
+.notSelectedProduit.resolved {
+  padding-top: 0 !important;
+  display: block;
+}
+
+
+@media (max-width: 500px) {
+  .login-div {
+    margin: 5rem;
+    width: 380px;
+    min-height: 400px;
+    padding: 60Px 35px 35px 35px;
+  }
+
+  .fields input {
+    width: 230px;
+    font-size: 15px;
+  }
+  
+}
+
+@media (max-width: 400px) {
+  .login-div {
+    margin: 5rem;
+    width: 340px;
+    min-height: 400px;
+    padding: 50px 25px 35px 25px;
+  }
+  
+  .fields input {
+    width: 200px;
+    font-size: 14px;
+  }
+
+  #form p.already_compt {
+    font-size: 22px;
+  } 
+
+  #form p.already_compt a {
+    font-size: 18px;
+  }
+
+}
+
+/* @keyframes shake {
+  0% {
+    margin-left: (0rem);
+  }
+  25% {
+    margin-left: (.5rem);
+  }
+  75% {
+    margin-left: (-0.5rem);
+  }
+  100% {
+    margin-left: (0rem);
+  }
+  
+}
+
+@keyframes shake-translate {
+  0% {
+    transform: translateX(0rem);
+  }
+  25% {
+    transform: translateX(.5rem);
+  }
+  50% {
+    transform: translateX(0rem);
+  }
+  75% {
+    transform: translateX(-0.5rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+
+} */
+
+@keyframes shake {
+  from, 
+  to {
+    transform: translateX(0);
+  }
+
+  40%,
+  80% {
+    transform: translateX(-0.5rem);
+  }
+
+  20%,
+  60% {
+    transform: translateX(.5rem);
+  }
+  
+}
+
+.input--invalid {
+  animation: shake 1s ease-in-out;
+  color: red;
+  box-shadow: 0px 0px 0px 0px #ff1e1e, 0px 0px 5px 0px #f42828;
+  /* box-shadow: inset 4px 4px 4px #ba0202, inset -4px -4px 4px #ff0000; */
+}
+
+/* .username {
+  animation: shake 1s ease-in-out;
+  box-shadow: 0px 0px 0px 0px #ff1e1e, 0px 0px 5px 0px #f42828;
+} */
+
+/* ================ RESPONSIVE =============== */
+
+
+
+
+
+/* ============== FORM ================ */
+

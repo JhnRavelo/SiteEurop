@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/formulaire.css">
+    <script src="./formulaire.js" defer></script>
+    <title>Formulaire</title>
+</head>
+<body>
+    
+        <!-- ================= FORMULAIRE ================== -->
+
+        <section id="form">
+            <div class="overlay"></div>
+    
+            <form data-multi-step class="multi-step-form">
+    
+                <div class="card" data-step>
+                    <div class="modal-box register-form">
+                        <div class="login-div">
+                            <div class="logo__form"></div>
+                            <div class="close-btn">
+                                <i class="fa fa-xmark"></i>
+                            </div>
+                            <div class="title__form">S'enregister</div>
+                            <div class="fields">
+                                <!-- <label for="name">Nom ou Entreprise</label> -->
+                                <div class="username">
+                                    <i class="fa fa-user"></i>
+                                    <input type="text" class="user-input" name="name" placeholder="Nom complet (ou Entreprise)">
+                                </div>
+                                <p class="error name-error"></p>
+        
+                            </div>
+                            <div class="next-prev-form">
+                                <p></p>
+                                <button type="button" data-next>Suivant</button>
+                            </div>
+                            <p>Vous avez déjà un compte? <a class="login">Se connecter</a></p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card" data-step>
+                    <div class="modal-box register-form">
+                        <div class="login-div">
+                            <div class="logo__form"></div>
+                            <div class="close-btn">
+                                <i class="fa fa-xmark"></i>
+                            </div>
+                            <div class="title__form">S'enregister</div>
+                            <div class="fields">
+                                <!-- <label for="email">Email</label> -->
+                                <div class="username">
+                                    <i class="fa fa-envelope"></i>
+                                    <input type="email" inputmode="email" class="user-input" name="email" placeholder="Email">
+                                </div>
+                                <p class="error email-error"></p>
+    
+                            </div>
+                            <div class="next-prev-form">
+                                <button type="button" data-previous>Précédant</button>
+                                <button type="button" data-next>Suivant</button>
+                            </div>
+                            <p>Vous avez déjà un compte? <a class="login">Se connecter</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card" data-step>
+                    <div class="modal-box register-form">
+                        <div class="login-div">
+                            <div class="logo__form"></div>
+                            <div class="close-btn">
+                                <i class="fa fa-xmark"></i>
+                            </div>
+                            <div class="title__form">S'enregister</div>
+                            <!-- <label for="telephone">Téléphone</label> -->
+                            <div class="fields">
+                                <div class="username">
+                                    <i class="fa fa-phone"></i>
+                                    <input type="text" inputmode="numeric" class="user-input" name="telephone" placeholder="téléphone">
+                                </div>
+                                <p class="error phone-error"></p>
+        
+                            </div>
+                                
+                            <div class="next-prev-form">
+                                <button type="button" data-previous>Précédant</button>
+                                <button type="button" data-next>Suivant</button>
+                            </div>
+                            <p>Vous avez déjà un compte? <a class="login">Se connecter</a></p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card" data-step>
+                    <div class="modal-box register-form">
+                        <div class="login-div">
+                            <div class="logo__form"></div>
+                            <div class="close-btn">
+                                <i class="fa fa-xmark"></i>
+                            </div>
+                            <div class="title__form">S'enregister</div>
+                            <!-- <label for="telephone">Téléphone</label> -->
+                            <div class="fields">
+        
+                            </div>
+                                
+                            <div class="next-prev-form">
+                                <button type="button" data-previous>Précédant</button>
+                                <p></p>
+                            </div>
+                            <div class="buttons">
+                                <button type="submit" class="form-button signin-button">Envoyer</button>
+                            </div>
+                            <p>Vous avez déjà un compte? <a class="login">Se connecter</a></p>
+                        </div>
+                    </div>
+                </div>
+    
+            </form>
+    
+            <di class="modal-box login-form">
+                <div class="login-div">
+                    <div class="logo__form"></div>
+                    <div class="close-btn">
+                        <i class="fa fa-xmark"></i>
+                    </div>
+                    <div class="title__form">Se connecter</div>
+                    <div class="fields">
+                        <div class="username">
+                            <i class="fa fa-user"></i>
+                            <input type="text" class="user-input" placeholder="Nom">
+                        </div>
+                        <p class="error login-name-error"></p>
+    
+                        <div class="username">
+                            <i class="fa fa-envelope"></i>
+                            <input type="email" class="user-input" placeholder="Email">
+                        </div>
+                        <p class="error login-email-error"></p>
+    
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" class="form-button signin-button">Se connecter</button>
+                    </div>
+                    <p>Pas encore de compte?<a class="register">S'enregistrer</a></p>
+                </div>
+            </di> 
+        </section>
+    
+
+        <div class="button__form">
+            <button>Formulaire</button>
+        </div>
+        <!-- ================= FORMULAIRE ================== -->
+</body>
+</html>

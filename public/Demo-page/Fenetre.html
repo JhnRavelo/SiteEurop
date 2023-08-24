@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- =========== Style =========== -->
+    <link rel="stylesheet" href="formulaire.css">
+    <link rel="stylesheet" href="./css/fenetre.css">
+    <link rel="stylesheet" href="./fonts/fontawesome/css/all.css">
+    <link rel="stylesheet" href="./css/jquery.fancybox.css">
+    <link rel="shortcut icon" href="./images/Logo_Euro.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="./css/vendor.css"> -->
+
+    <!-- =========== Style =========== -->
+
+    <!-- ========= Script ========= -->
+
+    <!-- <script src="js/modernizr.js"></script> -->
+    <!-- <script src="js/pace.min.js"></script> -->
+    <script src="./js/jquery-3.7.0.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <script src="./js/simpleParallax.min.js"></script>
+    <!-- ========= Script ========= -->
+
+    <title>Fenêtre</title>
+</head>
+<body>
+
+    <!-- ================= FORMULAIRE ================== -->
+
+    <section id="form">
+        <div class="overlay"></div>
+
+        <form data-multi-step class="multi-step-form">
+
+            <div class="card" data-step>
+                <div class="modal-box register-form">
+                    <div class="login-div">
+                        <div class="logo__form"></div>
+                        <div class="close-btn">
+                            <i class="fa fa-xmark"></i>
+                        </div>
+                        <div class="title__form">S'enregister</div>
+                        <div class="fields">
+                            <!-- <label for="name">Nom ou Entreprise</label> -->
+                            <div class="username">
+                                <i class="fa fa-user"></i>
+                                <input type="text" id="inputName" class="user-input" name="name" placeholder="Nom complet (ou Entreprise)" >
+                            </div>
+                            <p class="error name-error"></p>
+    
+                        </div>
+                        <div class="next-prev-form">
+                            <p></p>
+                            <button id="btnName" type="button" data-next>Suivant</button>
+                        </div>
+                        <p>Vous avez déjà un compte ? <a class="login">Se connecter</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-step>
+                <div class="modal-box register-form">
+                    <div class="login-div">
+                        <div class="logo__form"></div>
+                        <div class="close-btn">
+                            <i class="fa fa-xmark"></i>
+                        </div>
+                        <div class="title__form">S'enregister</div>
+                        <div class="fields">
+                            <!-- <label for="email">Email</label> -->
+                            <div class="username">
+                                <i class="fa fa-envelope"></i>
+                                <input type="email" id="inputEmail" inputmode="email" class="user-input" name="email" placeholder="Email" >
+                            </div>
+                            <p class="error email-error"></p>
+
+                        </div>
+                        <div class="next-prev-form">
+                            <button type="button" data-previous>Précédant</button>
+                            <button type="button" id="btnMail" data-next>Suivant</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-step>
+                <div class="modal-box register-form">
+                    <div class="login-div">
+                        <div class="logo__form"></div>
+                        <div class="close-btn">
+                            <i class="fa fa-xmark"></i>
+                        </div>
+                        <div class="title__form">S'enregister</div>
+                        <!-- <label for="telephone">Téléphone</label> -->
+                        <div class="fields">
+                            <div class="username">
+                                <i class="fa fa-phone"></i>
+                                <input type="text" id="inputPhone" inputmode="numeric" class="user-input" name="telephone" placeholder="téléphone" >
+                            </div>
+                            <p class="error phone-error"></p>
+    
+                        </div>
+                            
+                        <div class="next-prev-form">
+                            <button type="button" data-previous>Précédant</button>
+                            <button type="button" id="btnPhone" data-next>Suivant</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-step>
+                <div class="modal-box register-form">
+                    <div id="register_div" class="login-div">
+                        <div class="logo__form"></div>
+                        <div class="close-btn">
+                            <i class="fa fa-xmark"></i>
+                        </div>
+                        <div class="title__form">S'enregister</div>
+                        <!-- <label for="telephone">Téléphone</label> -->
+                        <div class="pre-info">
+                            <div class="nom">
+                                <i class="fa fa-user"></i>
+                                <p id="nom">Hardy HERINAVALONA</p>
+                            </div>
+                            <div class="email">
+                                <i class="fa fa-envelope"></i>
+                                <p id="email">hardy@gmail.com</p>
+                            </div>
+                            <div class="phone">
+                                <i class="fa fa-phone"></i>
+                                <p id="phone">034 66 231 17</p>
+                            </div>
+                        </div>
+                            
+                        <div class="menu-deroulant">
+                            <label>Produits qui vous Intérèssent :</label>
+
+                            <div class="container">
+                                <div class="select-btn">
+                                    <span class="btn-text"></span>
+                                    <span class="arrow-dwn">
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </span>
+                                </div>
+                    
+                                <ul class="list-items">
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Fenêtres Coulissante</span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Fenêtres Oscillo-Battante</span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Fenêtres à Souffltet</span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Fenêtres Jalousie</span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Fenêtres Projetant</span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Fenêtres Ouvrante</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <p class="notSelectedProduit">Sélectionnez au moins un produit</p>
+
+                        <div class="check">
+                            <label>
+                                <input id="acceptCheckbox" type="checkbox" checked>
+                                Cette action va vous créer un compte chez Europ'Alu
+                            </label>
+                        </div>
+
+                        <div class="next-prev-form">
+                            <button type="button" class="btn-prec" data-previous>Précédant</button>
+                        </div>
+                        <div class="buttons">
+                            <button id="submitBtn"  class="form-button signin-button">Envoyer</button>
+                        </div>
+                        <p class="errorNotChecked">Veillez accepter la création de compte</p>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+        <di class="modal-box login-form">
+            <div class="login-div">
+                <div class="logo__form"></div>
+                <div class="close-btn">
+                    <i class="fa fa-xmark"></i>
+                </div>
+                <div class="title__form">Se connecter</div>
+                <div class="fields">
+                    <div class="username">
+                        <i class="fa fa-user"></i>
+                        <input id="login-name" type="text" class="user-input" placeholder="Nom">
+                    </div>
+                    <p class="error login-name-error"></p>
+
+                    <div class="username">
+                        <i class="fa fa-envelope"></i>
+                        <input id="login-mail" type="email" inputmode="email" class="user-input" placeholder="Email">
+                    </div>
+                    <p class="error login-email-error"></p>
+
+                </div>
+                <div class="buttons">
+                    <button id="login-btn" type="submit" class="form-button signin-button">Se connecter</button>
+                </div>
+                <p>Pas encore de compte ?<a class="register">S'enregistrer</a></p>
+            </div>
+        </di> 
+    </section>
+
+    <!-- ================= FORMULAIRE ================== -->
+
+    <main class="corps">
+
+        <!-- ==================== HEADER ======================== -->
+
+        <!-- Grids -->
+        <div class="grids">
+            <div class="grid1"></div>
+            <div class="grid2"></div>
+            <div class="grid3"></div>
+            <div class="grid4"></div>
+            <div class="grid5"></div>
+            <div class="grid6"></div>
+            <div class="grid7"></div>
+            <div class="grid8"></div>
+            <div class="grid9"></div>
+        </div>
+        <!-- Grids -->
+
+        <header>
+            <div class="header">
+                <div class="header-logo">
+                    <img class="logo-header" src="./images/Logo_aluhd.png" alt="Logo">
+                </div>
+        
+                <a id="header-menu-trigger" href="#0">
+                    <!-- <span class="header-menu-text">Menu</span> -->
+                    <i class="fa fa-bars burger header-menu-icon"></i>
+                </a>
+            </div>
+
+            <!-- ----------NAV----------- -->
+
+            <nav class="header-nav">
+
+                <a href="#0" class="header-nav__close" title="close"><span></span></a>
+
+                <h3>Naviguer vers</h3>
+
+                <div class="header-nav__content">
+
+                    <ul class="header-nav__list">
+                        <li><a href="../index.html" title="home">Acceuil</a></li>
+                        <li><a class="smoothscroll"  href="#home" title="home">Vertec</a></li>
+                        <li><a href="./Porte.html">Porte</a></li>
+                        <li><a class="smoothscroll"  href="#" title="services">Chassis Fixes</a></li>
+                        <li><a class="smoothscroll"  href="#" title="works">Baies</a></li>
+                    </ul>
+
+
+                </div> 
+            </nav>
+
+            <!-- ----------NAV----------- -->
+            
+        </header>
+
+        <section id="home">
+            <div class="overlay"></div>
+            <div class="demi-overlay"></div>
+            <div class="gradient-overlay"></div>
+    
+            <div class="home-content-table">
+            <div class="home-content-tablecell">
+                <div class="row">
+                <div class="col-twelve">
+                    <h3 class="animate-intro">Fenêtres.</h3>
+                    <h1 class="animate-intro">
+                        Architecture 
+                        Modern <br />
+                        et Innovante
+                    
+                    </h1>
+    
+                    <div class="more animate-intro">
+                    <a class="smoothscroll button stroke" href="#produit">
+                        Nos produits
+                    </a>
+                    </div>
+                </div>
+                <!-- end col-twelve -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end home-content-tablecell -->
+            </div>
+            <!-- end home-content-table -->
+
+            <div class="scrolldown">
+            <a href="#produit" class="scroll-icon smoothscroll">
+                Scroll Down
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </a>
+            </div>
+        </section>
+        <!-- ==================== HEADER ======================== -->
+
+
+        <section id="produit">
+            <div class="header__produits__fenetre">
+                <div 
+                    class="heading-section " 
+                    data-rellax-speed="1" 
+                    data-rellax-xs-speed="1" 
+                    data-rellax-mobile-speed="1"
+                >
+                    <span class="subheading">Produits</span>
+                    <h2 class="mb-2 title">Nos models de fenêtres</h2>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="fenetre__coulissante">
+                        <div class="presentation">
+                            <div class="img__pres">
+                                <img class="float_right" src="./images/redim_FENÊTRES/flottante/fen coull.png" alt="">
+                            </div>
+                            <!-- data-rellax-speed="-0.1" 
+                            data-rellax-xs-speed="1" 
+                            data-rellax-mobile-speed="-2"  -->
+                            <div class="desc">
+                                
+                                <div class="button_intrested_start">
+                                <h1 class="title">Fenêtres Coulissante</h1>
+                                <p class="short__desc">Lorem, ipsum. Quam, sit obcaecati corrupti accusamusui suscipit morum quis. Incidunt aliquid maiores soluta mollitia eveniet?</p>
+
+                                    <button class="show-modal">
+                                        Intéressé ?
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery">
+                            <section id="portfolio">
+                                <div class="row portfolio-content">
+                                    <div id="folio-wrap" class="bricks-wrapper">
+                                        <div class="brick folio-item">
+                                            <a 
+                                                data-fancybox = "gallery1"
+                                                href="./images/redim_FENÊTRES/redim_FENÊTRE_COULISSANTES/_MG_4788.JPG" 
+                                            >
+                                                <img src="./images/redim_FENÊTRES/redim_FENÊTRE_COULISSANTES/_MG_4788.JPG" alt="Skaterboy" />
+                                            </a>
+                                        </div>
+                                        <div class="brick folio-item">
+                                            <a 
+                                                data-fancybox = "gallery1"
+                                                href="./images/redim_FENÊTRES/redim_FENÊTRE_COULISSANTES/_MG_4805-1.jpg" 
+                                            >
+                                                <img src="./images/redim_FENÊTRES/redim_FENÊTRE_COULISSANTES/_MG_4805-1.jpg" alt="Skaterboy" />
+                                            </a>
+                                        </div>
+                                        <div class="brick folio-item">
+                                            <a 
+                                                data-fancybox = "gallery1"
+                                                href="./images/redim_FENÊTRES/redim_FENÊTRE_COULISSANTES/_MG_7673.jpg" 
+                                            >
+                                                <img src="./images/redim_FENÊTRES/redim_FENÊTRE_COULISSANTES/_MG_7673.jpg" alt="Skaterboy" />
+                                            </a>
+                                        </div>
+                                        <div class="brick folio-item">
+                                            <a 
+                                                data-fancybox = "gallery1"
+                                                href="./images/redim_FENÊTRES/redim_FENÊTRE_COULISSANTES/_MG_7927-1.jpg" 
+                                            >
+                                                <img src="./images/redim_FENÊTRES/redim_FENÊTRE_COULISSANTES/_MG_7927-1.jpg" alt="Skaterboy" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="header__produits__fenetre">
+                        <div class="heading-section">
+                            <span class="subheading">X</span>
+                        </div>
+                    </div>
+
+                    <div class="fenetre">
+                        <div class="presentation pres2">
+                            <div class="desc">
+                                <div class="button_intrested_rigth">
+                                <h1 class="title">Fenêtres Oscillo-Battante</h1>
+                                <p class="short__desc">Lorem, ipsum. Quam, sit obcaecati corrupti accusamusui suscipit morum quis. Incidunt aliquid maiores soluta mollitia eveniet?</p>
+                                    <button class="show-modal">
+                                        Intéressé ?
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="img__pres">
+                                <img class="float_left" src="./images/redim_FENÊTRES/flottante/oscillo-battante.png" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="gallery">
+                            <section id="portfolio">
+                                <div class="row portfolio-content">
+                                    <div id="folio-wrap" class="bricks-wrapper">
+                                        <div class="brick folio-item">
+                                            <div class="item-wrap">
+                                                <a 
+                                                    data-fancybox = "gallery2"
+                                                    href="./images/redim_FENÊTRES/redim_FENÊTRE_OSCILLO-BATTANTE/_MG_3801-1.jpg" 
+                                                >
+                                                    <img src="./images/redim_FENÊTRES/redim_FENÊTRE_OSCILLO-BATTANTE/_MG_3801-1.jpg" alt="Skaterboy" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="brick folio-item">
+                                            <a 
+                                                data-fancybox = "gallery2"
+                                                href="./images/redim_FENÊTRES/redim_FENÊTRE_OSCILLO-BATTANTE/P1030588-1.jpg" 
+                                            >
+                                                <img src="./images/redim_FENÊTRES/redim_FENÊTRE_OSCILLO-BATTANTE/P1030588-1.jpg" alt="Skaterboy" />
+                                            </a>
+                                        </div>
+                                        <div class="brick folio-item">
+                                            <a 
+                                                data-fancybox = "gallery2"
+                                                href="./images/redim_FENÊTRES/redim_FENÊTRE_OSCILLO-BATTANTE/_MG_3883.jpg" 
+                                            >
+                                                <img src="./images/redim_FENÊTRES/redim_FENÊTRE_OSCILLO-BATTANTE/_MG_3883.jpg" alt="Skaterboy" />
+                                            </a>
+                                        </div>
+                                        <div class="brick folio-item">
+                                            <a 
+                                                data-fancybox = "gallery2"
+                                                href="./images/redim_FENÊTRES/redim_FENÊTRE_OSCILLO-BATTANTE/_MG_2897-1.jpg" 
+                                            >
+                                                <img src="./images/redim_FENÊTRES/redim_FENÊTRE_OSCILLO-BATTANTE/_MG_2897-1.jpg" alt="Skaterboy" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="header__produits__fenetre">
+                        <div class="heading-section">
+                            <span class="subheading">X</span>
+                        </div>
+                    </div>
+
+                    <div class="fenetre">
+                        <div class="presentation">
+                            <div class="img__pres">
+                                <img class="float_right" src="./images/redim_FENÊTRES/flottante/SOUFFLET NOIRE.png" alt="">
+                            </div>
+                            <div class="desc">
+                                <div class="button_intrested_start">
+                                <h1 class="title">Fenêtres à Souffltet</h1>
+                                <p class="short__desc">Lorem, ipsum. Quam, sit obcaecati corrupti accusamusui suscipit morum quis. Incidunt aliquid maiores soluta mollitia eveniet?</p>
+                                    <button class="show-modal">
+                                        Intéressé ?
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery">
+                            <section id="portfolio">
+                                <div class="row portfolio-content">
+                                    <div id="folio-wrap" class="bricks-wrapper">
+                                        <div class="brick folio-item">
+                                            <div class="item-wrap">
+                                                <a 
+                                                    data-fancybox = "gallery3"
+                                                    href="./images/redim_FENÊTRES/redim_FENÊTRE_À_SOUFFLET/_DSC9027.JPG" 
+                                                >
+                                                    <img src="./images/redim_FENÊTRES/redim_FENÊTRE_À_SOUFFLET/_DSC9027.JPG" alt="Skaterboy" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="brick folio-item">
+                                            <a 
+                                                data-fancybox = "gallery3"
+                                                href="./images/redim_FENÊTRES/redim_FENÊTRE_À_SOUFFLET/_MG_3994-1.jpg" 
+                                            >
+                                                <img src="./images/redim_FENÊTRES/redim_FENÊTRE_À_SOUFFLET/_MG_3994-1.jpg" alt="Skaterboy" />
+                                            </a>
+                                        </div>
+                                        <div class="brick folio-item">
+                                            <a 
+                                                data-fancybox = "gallery3"
+                                                href="./images/redim_FENÊTRES/redim_FENÊTRE_À_SOUFFLET/_MG_7691-1.jpg" 
+                                            >
+                                                <img src="./images/redim_FENÊTRES/redim_FENÊTRE_À_SOUFFLET/_MG_7691-1.jpg" alt="Skaterboy" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="header__produits__fenetre">
+                        <div class="heading-section">
+                            <span class="subheading">X</span>
+                        </div>
+                    </div>
+
+                    <div class="fenetre">
+                        <div class="presentation pres2">
+                            <div class="desc">
+                                <div class="button_intrested_rigth">
+                                <h1 class="title">Fenêtres Jalousie</h1>
+                                <p class="short__desc">Lorem, ipsum. Quam, sit obcaecati corrupti accusamusui suscipit morum quis. Incidunt aliquid maiores soluta mollitia eveniet?</p>
+                                    <button class="show-modal">
+                                        Intéressé ?
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="img__pres">
+                                <img class="float_left" src="./images/redim_FENÊTRES/flottante/jalousie.png" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="gallery">
+                            <section id="portfolio">
+                                <div class="row portfolio-content">
+                                    <div id="folio-wrap" class="bricks-wrapper">
+                                        <div class="brick folio-item">
+                                            <div class="item-wrap">
+                                                <a 
+                                                    data-fancybox = "gallery4"
+                                                    href="./images/redim_FENÊTRES/redim_JALOUSIE/00000130.JPG" 
+                                                >
+                                                    <img src="./images/redim_FENÊTRES/redim_JALOUSIE/00000130.JPG" alt="Skaterboy" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="brick folio-item">
+                                            <a 
+                                                data-fancybox = "gallery4"
+                                                href="./images/redim_FENÊTRES/redim_JALOUSIE/_MG_6448.JPG" 
+                                            >
+                                                <img src="./images/redim_FENÊTRES/redim_JALOUSIE/_MG_6448.JPG" alt="Skaterboy" />
+                                            </a>
+                                        </div>
+                                        <div class="brick folio-item">
+                                            <a 
+                                                data-fancybox = "gallery4"
+                                                href="./images/redim_FENÊTRES/redim_JALOUSIE/_MG_7819-1.jpg" 
+                                            >
+                                                <img src="./images/redim_FENÊTRES/redim_JALOUSIE/_MG_7819-1.jpg" alt="Skaterboy" />
+                                            </a>
+                                        </div>
+                                        <div class="brick folio-item">
+                                            <a 
+                                                data-fancybox = "gallery4"
+                                                href="./images/redim_FENÊTRES/redim_JALOUSIE/IMG_20220823_104402-1.jpg" 
+                                            >
+                                                <img src="./images/redim_FENÊTRES/redim_JALOUSIE/IMG_20220823_104402-1.jpg" alt="Skaterboy" />
+                                            </a>
+                                        </div>
+
+                                        <div class="brick folio-item">
+                                            <a 
+                                                data-fancybox = "gallery4"
+                                                href="./images/redim_FENÊTRES/redim_JALOUSIE/IMG_2690-1.jpg" 
+                                            >
+                                                <img src="./images/redim_FENÊTRES/redim_JALOUSIE/IMG_2690-1.jpg" alt="Skaterboy" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="header__produits__fenetre">
+                        <div class="heading-section">
+                            <span class="subheading">X</span>
+                        </div>
+                    </div>
+
+                    <div class="fenetre">
+                        <div class="presentation">
+                            <div class="img__pres">
+                                <img class="float_right" src="./images/redim_FENÊTRES/flottante/fenetre-projetant.png" alt="">
+                            </div>
+                            <div class="desc">
+                                <div class="button_intrested_start">
+                                <h1 class="title">Fenêtres Projetant</h1>
+                                <p class="short__desc">Lorem, ipsum. Quam, sit obcaecati corrupti accusamusui suscipit morum quis. Incidunt aliquid maiores soluta mollitia eveniet?</p>
+                                    <button class="show-modal">
+                                        Intéressé ?
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery">
+                            <section id="portfolio">
+                                <div class="row portfolio-content">
+                                    <div id="folio-wrap" class="bricks-wrapper">
+                                        <div class="brick folio-item">
+                                            <div class="item-wrap">
+                                                <a 
+                                                    data-fancybox = "gallery5"
+                                                    href="./images/redim_FENÊTRES/redim_PROJETANT/_MG_1799.JPG" 
+                                                >
+                                                    <img src="./images/redim_FENÊTRES/redim_PROJETANT/_MG_1799.JPG" alt="Skaterboy" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="brick folio-item">
+                                            <a 
+                                                data-fancybox = "gallery5"
+                                                href="./images/redim_FENÊTRES/redim_PROJETANT/_MG_1803.JPG" 
+                                            >
+                                                <img src="./images/redim_FENÊTRES/redim_PROJETANT/_MG_1803.JPG" alt="Skaterboy" />
+                                            </a>
+                                        </div>
+                                        <div class="brick folio-item">
+                                            <a 
+                                                data-fancybox = "gallery5"
+                                                href="./images/redim_FENÊTRES/redim_PROJETANT/_MG_6986-1.jpg" 
+                                            >
+                                                <img src="./images/redim_FENÊTRES/redim_PROJETANT/_MG_6986-1.jpg" alt="Skaterboy" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="header__produits__fenetre">
+                        <div class="heading-section">
+                            <span class="subheading">X</span>
+                        </div>
+                    </div>
+
+                    <div class="fenetre">
+                        <div class="presentation pres2">
+                            <div class="desc">
+                                <div class="button_intrested_rigth">
+                                <h1 class="title">Fenêtres Ouvrante</h1>
+                                <p class="short__desc">Lorem, ipsum. Quam, sit obcaecati corrupti accusamusui suscipit morum quis. Incidunt aliquid maiores soluta mollitia eveniet?</p>
+                                    <button class="show-modal">
+                                        Intéressé ?
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="img__pres">
+                                <img class="float_left" src="./images/redim_FENÊTRES/flottante/fenetre-ouvrante.png" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="gallery">
+                            <section id="portfolio">
+                                <div class="row portfolio-content">
+                                    <div id="folio-wrap" class="bricks-wrapper">
+                                        <div class="brick folio-item">
+                                            <a 
+                                                data-fancybox = "gallery6"
+                                                href="./images/redim_FENÊTRES/redim_FENÊTRE_OUVRANTE/_MG_3898-1.jpg" 
+                                            >
+                                            <img src="./images/redim_FENÊTRES/redim_FENÊTRE_OUVRANTE/_MG_3898-1.jpg" alt="Skaterboy" />
+                                            </a>
+                                        </div>
+                                        <div class="brick folio-item">
+                                            <a 
+                                                data-fancybox = "gallery6"
+                                                href="./images/redim_FENÊTRES/redim_FENÊTRE_OUVRANTE/_MG_7827.jpg" 
+                                                >
+                                                <img src="./images/redim_FENÊTRES/redim_FENÊTRE_OUVRANTE/_MG_7827.jpg" alt="Skaterboy" />
+                                            </a>
+                                        </div>
+                                        <div class="brick folio-item">
+                                            <a 
+                                                data-fancybox = "gallery6"
+                                                href="./images/redim_FENÊTRES/redim_FENÊTRE_OUVRANTE/_MG_2553.JPG" 
+                                            >
+                                                <img src="./images/redim_FENÊTRES/redim_FENÊTRE_OUVRANTE/_MG_2553.JPG" alt="Skaterboy" />
+                                            </a>
+                                        </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== FOOTER ====================== -->
+
+        <footer id="foot">
+            <section id="contact" class="s-contact target-section">
+
+                <div class="grid-overlay">
+                    <div></div>
+                </div>
+
+                <div class="row contact-main" data-aos="fade-up">
+                    <div class="col-full">
+                        <div class="logo__foot">
+                            <a href="Fenetre.html">
+                                <img class="float_right" src="./images/Logo_aluhd.png" alt="Logo">
+                            </a>
+                        </div>
+                    <div class="d__flex">
+                
+                        <div 
+                            class="contact"
+                        >
+                            <ul>
+                                <li><pre>Andraharo : 034 03 11 786</pre></li>
+                                <li><pre>Tamatave  : 034 56 64 786</pre></li>
+                                <li><pre>Majunga   : 034 07 80 786</pre></li>
+                                <li><pre>Nosy Be   : 034 11 80 786</pre></li>
+                            </ul>
+                        </div>
+                        <div class="droite">
+                            <p class="contact-email">
+                                <a href="mailto:#0">europ-alu@europ-alu.com</a>
+                            </p>
+                            <p class="contact-address">
+                            Europ'Alu 2018 ALL RIGHTS<br>
+                            RESERVED BY Ankasitrahina
+                            </p>
+                        </div>
+                    </div>
+
+                        <ul 
+                            class="contact-social"
+                        >
+                            <li>
+                                <a href="#0"><i class="fab fa-facebook float_up"></i></a>
+                            </li>
+                            <li>
+                                <a href="#0"><i class="fab fa-twitter float_up"></i></a>
+                            </li>
+                            <li>
+                                <a href="#0"><i class="fab fa-linkedin float_up"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+        </footer>
+
+    </main>
+    <!-- ===================== FOOTER ====================== -->
+
+    <!-- ============= JS ============= -->
+    <script type="module" src="formulaire.js"></script>
+    <script type="module" src="./js/inactivity.js"></script>
+    <!-- <script src="js/jquery-2.1.3.min.js"></script> -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script type="text/javascript" src="./js/rellax.js"></script> -->
+    <!-- <script type="text/javascript" src="./js/option.js"></script> -->
+    <!-- <script>
+        var rellax = new Rellax('.rellax', {
+        //   center: true,
+          callback: function (position) {
+            // callback every position change
+            console.log(position);
+          },
+          breakpoints: [576, 768, 1024]
+        });
+        // var rellax = new Rellax('.rellax');
+    </script> -->
+
+    <script>
+
+        var image_up_droite = document.getElementsByClassName('float_up');
+        new simpleParallax(image_up_droite, {
+            overflow :true,
+            orientation: 'up',
+            delay: .2,
+            scale: 1.8
+        });
+
+        var image_up_droite = document.getElementsByClassName('float_right');
+        new simpleParallax(image_up_droite, {
+            overflow :true,
+            orientation: 'up',
+            scale: 1.8
+        });
+
+        // var image_up = document.querySelector('img');
+        // new simpleParallax(image_up, {
+        //     overflow :true,
+        //     orientation: 'up',
+        //     scale: 1.8
+        // });
+
+        var image_up_gauche = document.getElementsByClassName('float_left');
+        new simpleParallax(image_up_gauche, {
+            overflow :true,
+            orientation: 'up',
+            scale: 1.8
+        });
+
+
+    </script>
+    
+
+     <!-- ============= JS =============  -->
+
+    <!-- ============= CSS ============= -->
+
+
+    <!-- ============= CSS ============= -->
+
+</body>
+</html>
