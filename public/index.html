@@ -1,83 +1,105 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Europ'Alu</title>
-    <link rel="stylesheet" href="index.css" />
-    <link rel="shortcut icon" href="assets/logo/favico.png">
-    <link rel="stylesheet" href="./Demo-page/css/fenetre.css">
-    <link rel="stylesheet" href="./Demo-page/fonts/fontawesome/css/all.css">
-    <script type="importmap">
-      {
-          "imports": {
-              "three": "./build/three.module.js"
-              
-          }
-      }
-  </script>
-  <script src="./Demo-page/js/pace.min.js"></script>
-  <script src="./Demo-page/js/jquery-3.7.0.js"></script>
-  <script src="gsap.min.js"></script>
-  <script src="EasePack.min.js"></script>
-  
-  </head>
-  <body>
-    <header>
-      <div class="header">
-          <div class="header-logo">
-              <a href="/">
-                  <img src="./Demo-page/images/Logo_aluhd.png" alt="Logo">
-              </a>
-          </div>
-  
-          <a id="header-menu-trigger" href="#0">
-              <!-- <span class="header-menu-text">Menu</span> -->
-              <i class="fa fa-bars burger header-menu-icon" style="color: azure;"></i>
-          </a>
-      </div>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Europ'Alu</title>
+        <link rel="stylesheet" href="index.css" />
+        <link rel="shortcut icon" href="assets/logo/favico.png" />
+        <link rel="stylesheet" href="./Demo-page/css/fenetre.css" />
+        <link rel="stylesheet" href="./Demo-page/fonts/fontawesome/css/all.css" />
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "./build/three.module.js"
+                }
+            }
+        </script>
+        <script src="./Demo-page/js/pace.min.js"></script>
+        <script src="./Demo-page/js/jquery-3.7.0.js"></script>
+        <script src="gsap.min.js"></script>
+        <script src="EasePack.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <div class="header-logo">
+                    <a href="/">
+                        <img src="./Demo-page/images/Logo_aluhd.png" alt="Logo" />
+                    </a>
+                </div>
 
-      <!-- ----------NAV----------- -->
+                <a id="header-menu-trigger" href="#0">
+                    <!-- <span class="header-menu-text">Menu</span> -->
+                    <i class="fa fa-bars burger header-menu-icon" style="color: azure"></i>
+                </a>
+            </div>
 
-      <nav class="header-nav">
+            <!-- ----------NAV----------- -->
 
-          <a href="#0" class="header-nav__close" title="close"><span></span></a>
+            <nav class="header-nav">
+                <a href="#0" class="header-nav__close" title="close"><span></span></a>
 
-          <h3>Naviguer vers</h3>
+                <h3>Naviguer vers</h3>
 
-          <div class="header-nav__content">
+                <div class="header-nav__content">
+                    <ul class="header-nav__list">
+                        <li><a class="smoothscroll" href="#home" title="home">Acceuil</a></li>
+                        <li><a href="./Demo-page/Porte.html" title="about">Portes</a></li>
+                        <li><a href="./Demo-page/Fenetre.html" title="about">Fenêtre</a></li>
+                        <li>
+                            <a href="./Demo-page/Habillage_Facade.html" title="about"
+                                >Habillage Façade</a
+                            >
+                        </li>
+                        <li><a href="./Demo-page/Baies.html" title="about">Baies</a></li>
+                        <li><a href="./Demo-page/Garde_corp.html" title="about">Garde corps</a></li>
+                        <li>
+                            <a href="./Demo-page/Amenagement_Interieur.html" title="about"
+                                >Aménagement Intérieur</a
+                            >
+                        </li>
+                        <li>
+                            <a href="./Demo-page/Amenagement_Exterieur.html" title="about"
+                                >Aménagement Extérieur</a
+                            >
+                        </li>
+                        <li>
+                            <a href="./Demo-page/Fermeture_exterieur.html" title="about"
+                                >Ferméture Extérieur</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-              <ul class="header-nav__list">
-                  <li><a class="smoothscroll"  href="#home" title="home">Acceuil</a></li>
-                  <li><a class="smoothscroll"  href="#home" title="home">Vertec</a></li>
-                  <li><a href="./Demo-page/Fenetre.html" title="about">Fenêtre</a></li>
-                  <li><a href="./Demo-page/Porte.html" title="about">Portes</a></li>
-                  <li><a class="smoothscroll"  href="#" title="services">Chassis Fixes</a></li>
-                  <li><a class="smoothscroll"  href="#" title="works">Baies</a></li>
-              </ul>
+            <!-- ----------NAV----------- -->
+        </header>
 
-          </div> 
-      </nav>
+        <div class="loading">
+            <div class="lds-roller">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="modal-content">
+            <iframe class="page" src="" frameborder="0"></iframe>
+        </div>
 
-      <!-- ----------NAV----------- -->
-        
-  </header>
-
-    <div class="loading"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-    </div>
-    <div class="modal-content">
-      <iframe class="page" src="" frameborder="0"></iframe>
-    </div>
-
-    <script type="module" src="arkindi3D.js"></script>
-    <script type="module" src="./Demo-page/js/inactivity.js"></script>
-    <script src="Demo-page/js/jquery-2.1.3.min.js"></script>
-    <!-- <script src="jquery-3.7.0.js"></script> -->
-    <script src="jquery.fitvids.js"></script>
-    <script src="./Demo-page/js/plugins.js"></script>
-    <script src="./main.js"></script>
-    
-  </body>
+        <script type="module" src="arkindi3D.js"></script>
+        <script type="module" src="./Demo-page/js/inactivity.js"></script>
+        <script src="Demo-page/js/jquery-2.1.3.min.js"></script>
+        <!-- <script src="jquery-3.7.0.js"></script> -->
+        <script src="jquery.fitvids.js"></script>
+        <script src="./Demo-page/js/plugins.js"></script>
+        <script src="./main.js"></script>
+    </body>
 </html>

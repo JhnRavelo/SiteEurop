@@ -1,0 +1,180 @@
+#home {
+    width: 100%;
+    height: 100vh;
+    background-color: #151515;
+    background-image: url(../images/HABILLAGE_FAÇADE/MUR_RIDEAU/_MG_4038.png) !important;
+    background-repeat: no-repeat;
+    background-position: center 30%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+}
+
+.grids {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.grids div {
+    width: 1px;
+    height: 100%;
+    background-color: #c5c4c4c9 !important; 
+}
+
+.grids div:nth-child(5) {
+    background-color: #93939381 !important; 
+}
+
+.grids div:first-child, .grids div:last-child {
+    background-color: transparent; 
+}
+
+
+/* .presentation {
+    width: 100vw;
+    border: 1px solid red;
+    margin: 0;
+} */
+
+/* ===================== IMAGE PARALLAX ======================= */
+
+.Habillage_presenatation .pres {
+    width: 50%;
+}
+
+.Habillage_presenatation img.image_parallaxe {
+    /* min-height: 300px; */
+    height: 447px;
+    width: 100%;
+}
+
+/* ===================== IMAGE PARALLAX ======================= */
+
+
+/* ===================== DESCRIPTION ======================= */
+
+.Habillage_presenatation {
+    width: 100%;
+    height: 450px;
+    /* border: 1px solid red; */
+    display: flex;
+    background: none;
+    /* background-color: #090021; */
+    /* background: white; */
+    background-color: rgba(227, 226, 226, 0.621);
+}
+
+/* .Habillage_presenatation.pres2 {
+    display: flex;
+    text-align: end;
+} */
+
+
+.Habillage_presenatation .description {
+    width: 50%;   
+    padding: 2rem;
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Habillage_presenatation .description .desc_box {
+    /* border: 1px solid green; */
+}
+
+.Habillage_presenatation .description .desc_box .title {
+    font-weight: 500;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.desc_box h2 {
+    color: #090021;
+    margin-bottom: 1rem;
+}
+
+
+/* ===================== DESCRIPTION ======================= */
+
+/* ------------- separation ------------ */
+
+.separation {
+    width: 100%;
+    height: 250px;
+    background: rgb(255, 255, 255);
+    /* background: #0b002c; */
+    /* background: var(--orange); */
+    /* background-color: rgb(230, 230, 230); */
+    position: absolute;
+    display: none;
+}
+
+.separation .grid-overlay {
+    opacity: 1;
+}
+
+/* ------------- separation ------------ */
+
+.gallery {
+    padding-top: 100px;
+}
+
+@media (max-width: 1024px) {
+    .Habillage_presenatation .description .desc_box .title {
+        font-size: 2.5rem;
+        font-weight: 500;
+        width: 100%;
+    }
+
+    .Habillage_presenatation {
+        height: 300px;
+    }
+
+    .separation {
+        height: 200px;
+    }
+
+    .Habillage_presenatation img.image_parallaxe {
+        /* min-height: 300px; */
+        max-height: 296px;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 630px) {
+
+    .Habillage_presenatation {
+        display: flex;
+        background-color: rgb(239, 238, 238);
+        flex-direction: column;
+    }
+
+    .Habillage_presenatation .description {
+        width: 100%;
+    }
+
+    .Habillage_presenatation .pres {
+        width: 100%;
+        height: 225px;
+        /* max-height: 450px; */
+    }
+
+    .Habillage_presenatation img.image_parallaxe {
+        height: 225px !important;
+        width: 100%;
+    }    
+
+    .Habillage_presenatation {
+        min-height: 450px;
+    }
+}
+

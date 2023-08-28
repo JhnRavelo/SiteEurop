@@ -191,7 +191,13 @@ const imgAnimation = (min,max,polar,index) => {
 	
 	// return divLabel
 }
-
+const handleClick = (index,url) => {
+	if(divLabel[index]){
+		divLabel[index].addEventListener('click',()=>{
+			window.location.href = url
+		})
+	}
+}
 
 const controlChange = () => {
 
@@ -308,6 +314,7 @@ function animate() {
     })
     executate = false
     }
+		handleClick(0,'./Demo-page/Habillage_Facade.html')
 }
 
 animate();
