@@ -3,6 +3,5 @@ node_modules
 config.json
 images
 fonts
-FICHIER OBJ
 fonts
-Akor.glb
+obj/

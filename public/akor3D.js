@@ -5,23 +5,10 @@ import { OrbitControls } from './jsm/controls/OrbitControls.js'
 import { CSS2DRenderer, CSS2DObject } from './jsm/renderers/CSS2DRenderer.js'
 import { GLTFLoader } from './jsm/loaders/GLTFLoader.js'
 import { DRACOLoader } from './jsm/loaders/DRACOLoader.js'
+import { imgAnimate, imgAnimation } from './utils.js'
 // import { RGBLoader } from './jsm/loaders/RGBLoader.js'
 
-let camera,
-    controls,
-    scene,
-    renderer,
-    model,
-    hemiLight,
-    topLight,
-    labelRender,
-    portelabel,
-    fenetrelabel,
-    garagelabel,
-    ambientLight,
-    object,
-    arkindilabel,
-    divAkor
+let camera, controls, scene, renderer, model, hemiLight, topLight, labelRender, ambientLight, object
 
 camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 20)
 camera.position.z = 2.5
@@ -31,18 +18,6 @@ camera.position.z = 2.5
 scene = new THREE.Scene()
 scene.add(camera)
 
-// model
-
-// const onProgress = function ( xhr ) {
-
-// if ( xhr.lengthComputable ) {
-
-//     const percentComplete = xhr.loaded / xhr.total * 100;
-//     console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
-
-// }
-
-// };
 const loading = new THREE.LoadingManager()
 const div_load = document.querySelector('.loading')
 
@@ -57,18 +32,8 @@ dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5
 dracoLoader.setDecoderConfig({ type: 'js' })
 loader.setDRACOLoader(dracoLoader)
 
-loader.load('./Akor.glb', (gltf) => {
+loader.load('./assets/obj/Akor/Akor.glb', (gltf) => {
     object = gltf.scene
-    // object.traverse( child => {
-    // 	if(child.isMesh){
-    // 		child.castShadow = true
-    // 		child.receiveShadow = true
-    // 	}
-    // 	// var material = child.material
-    // 	// if(material && material.map){
-    // 	// 	material.map.anisotropy = 16
-    // 	// }
-    // })
     object.rotation.set(-Math.PI / 2, 0, 0)
     object.position.set(-0.8, 0, 0.5)
     object.scale.set(0.0001, 0.0001, 0.0001)
@@ -82,41 +47,6 @@ loader.load('./Akor.glb', (gltf) => {
     scene.add(arkindilabel)
     scene.add(object)
 })
-
-// new MTLLoader()
-// 	.setPath( 'AKORDIGUE/' )
-// 	.load( 'SRAKOORDIGUE.mtl', ( materials ) => {
-
-// 		materials.preload();
-
-// 		new OBJLoader()
-// 			.setMaterials( materials )
-// 			.setPath( 'AKORDIGUE/' )
-// 			.load( 'SRAKOORDIGUE.obj', ( object ) => {
-// 				model = object
-// 				model.traverse( child => {
-// 					if(child.isMesh){
-// 						child.castShadow = true
-// 						child.receiveShadow = true
-// 					}
-// 					var material = child.material
-// 					if(material && material.map){
-// 						material.map.anisotropy = 16
-// 					}
-// 				})
-// 				model.rotation.set(-Math.PI/2,0,0)
-// 				model.position.set(-0.8,0,0.5)
-// 				model.scale.set(0.0001,0.0001,0.0001)
-// 				scene.add( model )
-// 				scene.add(portelabel)
-//     			portelabel.position.set(-0.9,0.095,0)
-// 				scene.add(fenetrelabel)
-// 				fenetrelabel.position.set(-0.175,0.168,-0.17)
-// 				garagelabel.position.set(-0.168,0.16,0.1)
-// 				scene.add(garagelabel)
-// 			});
-
-// 	} );
 
 //
 // ------------------Render 2D----------
@@ -138,23 +68,33 @@ const create2DElement = (urlImage, altImage, classImage, classDiv) => {
     div.appendChild(img)
     div.className = classDiv
     label = new CSS2DObject(div)
-    return label
+    return [label, div]
 }
 
-portelabel = create2DElement(
+const [portelabel, portediv] = create2DElement(
     './assets/icon/iconizer-ouverture-de-porte-ouverte.svg',
     'img_porte',
     'imgi',
     'divi'
 )
-fenetrelabel = create2DElement(
+const [fenetrelabel, fenetrediv] = create2DElement(
     './assets/icon/iconizer-la-fenetre.svg',
     'img_fentere',
     'imgi',
     'divi'
 )
-garagelabel = create2DElement('./assets/icon/iconizer-garage.svg', 'img_garage', 'imgi', 'divi')
-arkindilabel = create2DElement('./assets/icon/Arkindi.PNG', 'img_arkindi', 'imgAkor', 'akor')
+const [garagelabel, garagediv] = create2DElement(
+    './assets/icon/iconizer-garage.svg',
+    'img_garage',
+    'imgi',
+    'divi'
+)
+const [arkindilabel, arkindidiv] = create2DElement(
+    './assets/icon/Arkindi.PNG',
+    'img_arkindi',
+    'imgAkor',
+    'akor'
+)
 
 // ------------------Render 2D----------
 renderer = new THREE.WebGLRenderer({ antialias: true })
@@ -170,8 +110,6 @@ renderer.setClearColor(0xe86222)
 // renderer.toneMapping = THREE.CineonToneMapping
 // renderer.toneMappingExposure = 1.1
 // renderer.shadowMap.enabled = true
-//
-
 controls = new OrbitControls(camera, renderer.domElement)
 controls.maxPolarAngle = Math.PI / 2
 controls.maxDistance = 3
@@ -202,62 +140,35 @@ scene.add(hemiLight)
 // scene.add(new THREE.AxesHelper(20))
 window.addEventListener('resize', onWindowResize)
 // --------display icon----------
+portediv.addEventListener('click', () => {
+    window.location.href = './Demo-page/Porte.html'
+})
+fenetrediv.addEventListener('click', () => {
+    window.location.href = './Demo-page/Fenetre.html'
+})
+garagediv.addEventListener('click', () => {
+    window.location.href = './Demo-page/Fermeture_exterieur.html'
+})
+arkindidiv.addEventListener('click', () => {
+    window.location.href = './index.html'
+})
+
+
 const controlChange = () => {
-    let imgLabel = [...document.querySelectorAll('.imgi')]
-    let divLabel = [...document.querySelectorAll('.divi')]
+    // let imgLabel = [...document.querySelectorAll('.imgi')]
+    // let divLabel = [...document.querySelectorAll('.divi')]
 
     var objectRotation = controls.getAzimuthalAngle(),
         objectPolar = controls.getPolarAngle()
-
-    console.log(`rotation:${objectRotation} | polar:${objectPolar}`)
-
-    if (objectRotation <= -1.5 && objectRotation >= -1.9 && objectPolar >= 0.8) {
-        gsap.to(imgLabel[0], {
-            opacity: 1,
-            duration: 1,
-        })
-        gsap.to(divLabel[0], {
-            opacity: 1,
-            duration: 1,
-            pointerEvents: 'all',
-        })
-    } else if (
-        (objectRotation >= -3.2 && objectRotation <= -2.7 && objectPolar >= 0.8) ||
-        (objectRotation >= 2.7 && objectRotation <= 3.2 && objectPolar >= 0.8)
-    ) {
-        gsap.to(imgLabel[1], {
-            opacity: 1,
-            duration: 1,
-        })
-        gsap.to(divLabel[1], {
-            opacity: 1,
-            duration: 1,
-            pointerEvents: 'all',
-        })
-    } else if (objectRotation >= -0.3 && objectRotation <= 0.3 && objectPolar >= 0.8) {
-        gsap.to(imgLabel[2], {
-            opacity: 1,
-            duration: 1,
-        })
-        gsap.to(divLabel[2], {
-            opacity: 1,
-            duration: 1,
-            pointerEvents: 'all',
-        })
+    imgAnimation(-1.9, -1.5, 0.8, 0, objectPolar, objectRotation)
+    // imgAnimation(-3.2, -2.7, 0.8, 1, objectPolar, objectRotation)
+    // imgAnimation(2.7, 3.2, 0.8, 1, objectPolar, objectRotation)
+    imgAnimation(-0.3, 0.3, 0.8, 2, objectPolar, objectRotation)
+    if (objectRotation >= -3.2 && objectRotation <= -2.7 && objectPolar >= 0.8 || objectRotation >= 2.7 && objectRotation <= 3.2 && objectPolar >= 0.8) {
+        imgAnimate(1, 1, 'all')
     } else {
-        for (let i = 0; i < 3; i++) {
-            gsap.to(imgLabel[i], {
-                opacity: 0,
-                duration: 1,
-            })
-            gsap.to(divLabel[i], {
-                opacity: 0,
-                duration: 1,
-                pointerEvents: 'none',
-            })
-        }
+        imgAnimate(1, 0, 'none')
     }
-
     if (objectRotation >= -0.4 && objectRotation <= 0.8 && objectPolar >= 1.3) {
         gsap.to('.imgAkor', {
             opacity: 1,
@@ -303,13 +214,6 @@ function animate() {
     controls.update()
     labelRender.render(scene, camera)
     controlChange()
-    divAkor = document.querySelector('.akor')
-    if (divAkor && executate) {
-        divAkor.addEventListener('click', () => {
-            window.location.href = 'index.html'
-        })
-        executate = false
-    }
 }
 
 animate()
