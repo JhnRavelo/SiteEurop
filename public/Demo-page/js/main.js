@@ -1,17 +1,23 @@
-// ============= PARALLAXE =============
 
-const parallax = document.getElementsByClassName("parallax");
-
-window.addEventListener("scroll", function() {
-    let offset = window.pageYOffset;
-    parallax.style.backgroundPositionY = offset * 0.7 + "px";
-    // console.log("offset: " + offset);
-    // console.log(first)
-})
+// ==================== TOAST NOTIFICATION ===================
 
 
-// ============= PARALLAXE =============
+
+// ==================== TOAST NOTIFICATION ===================
+
+
 // ================= NAV ==================
+
+// ------------------------------------ LOGIN LOG OUT ----------------------------------------
+
+const loginLogout = document.querySelector(".login__logout")
+const userIcon = document.querySelector(".userIcon")
+const logout = document.querySelector(".logout")
+
+userIcon.addEventListener("click", () => {
+	logout.classList.toggle("showed")
+})
+// ------------------------------------ LOGIN LOG OUT ----------------------------------------
 
    var ssOffCanvas = function() {
 

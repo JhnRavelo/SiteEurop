@@ -241,6 +241,18 @@
                     <img class="logo-header" src="./images/Logo_aluhd.png" alt="Logo">
                 </div>
         
+                <div class="login__logout">
+                    <div class="deco">
+                        <div class="use__icon">
+                            <i class="userIcon fa-solid fa-user"></i>
+                        </div>
+    
+                    </div>
+                    <div class="logout">
+                        <p>Se déconnecter</p>
+                    </div>
+                </div>
+
                 <a id="header-menu-trigger" href="#0">
                     <!-- <span class="header-menu-text">Menu</span> -->
                     <i class="fa fa-bars burger header-menu-icon"></i>
@@ -327,19 +339,20 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="fenetre">
-                        <div class="presentation pres2">
+                    <div class="fenetre__coulissante">
+                        <div class="presentation">
+                            <div class="img__pres">
+                                <img class="float_left" src="./images/PNG/GRILLE BIJOUTIER.png" alt="">
+                            </div>
                             <div class="desc">
                                 <div class="button_intrested_rigth">
-                                <h1 class="title">Grilles Bijoutier</h1>
-                                <p class="short__desc">Lorem, ipsum. Quam, sit obcaecati corrupti accusamusui suscipit morum quis. Incidunt aliquid maiores soluta mollitia eveniet?</p>
+                                    <h1 class="title">Grilles Bijoutier</h1>
+                                    <p class="short__desc">Lorem, ipsum. Quam, sit obcaecati corrupti accusamusui suscipit morum quis. Incidunt aliquid maiores soluta mollitia eveniet?</p>
+                                    
                                     <button class="show-modal">
                                         Intéressé ?
                                     </button>
                                 </div>
-                            </div>
-                            <div class="img__pres">
-                                <img class="float_left" src="./images/PNG/GRILLE BIJOUTIER.png" alt="">
                             </div>
                         </div>
                         
@@ -347,48 +360,42 @@
                             <section id="portfolio">
                                 <div class="row portfolio-content">
                                     <div id="folio-wrap" class="bricks-wrapper">
+
                                         <div class="brick folio-item">
-                                            <div class="item-wrap">
-                                                <a 
-                                                    data-fancybox = "gallery2"
-                                                    href="./images/FERMETURES_EXTÉRIEURES/GRILLES_BIJOUTIER/00000149.png" 
-                                                >
-                                                    <img src="./images/FERMETURES_EXTÉRIEURES/GRILLES_BIJOUTIER/00000149.png" alt="Skaterboy" />
-                                                </a>
-                                            </div>
+                                            <a 
+                                                data-fancybox = "gallery2"
+                                                href="./images/FERMETURES_EXTÉRIEURES/GRILLES_BIJOUTIER/00000149.png" 
+                                            >
+                                                <img src="./images/FERMETURES_EXTÉRIEURES/GRILLES_BIJOUTIER/00000149.png" alt="Skaterboy" />
+                                            </a>
+                                        </div>
+
+                                        <div class="brick folio-item">
+                                            <a 
+                                                data-fancybox = "gallery2"
+                                                href="./images/FERMETURES_EXTÉRIEURES/GRILLES_BIJOUTIER/_MG_0352-1.png" 
+                                            >
+                                                <img src="./images/FERMETURES_EXTÉRIEURES/GRILLES_BIJOUTIER/_MG_0352-1.png" alt="Skaterboy" />
+                                            </a>
                                         </div>
                                         <div class="brick folio-item">
-                                            <div class="item-wrap">
-                                                <a 
-                                                    data-fancybox = "gallery2"
-                                                    href="./images/FERMETURES_EXTÉRIEURES/GRILLES_BIJOUTIER/_MG_0352-1.png" 
-                                                >
-                                                    <img src="./images/FERMETURES_EXTÉRIEURES/GRILLES_BIJOUTIER/_MG_0352-1.png" alt="Skaterboy" />
-                                                </a>
-                                            </div>
+                                            <a 
+                                                data-fancybox = "gallery2"
+                                                href="./images/FERMETURES_EXTÉRIEURES/GRILLES_BIJOUTIER/_MG_1953.png" 
+                                            >
+                                                <img src="./images/FERMETURES_EXTÉRIEURES/GRILLES_BIJOUTIER/_MG_1953.png" alt="Skaterboy" />
+                                            </a>
                                         </div>
                                         <div class="brick folio-item">
-                                            <div class="item-wrap">
-                                                <a 
-                                                    data-fancybox = "gallery2"
-                                                    href="./images/FERMETURES_EXTÉRIEURES/GRILLES_BIJOUTIER/_MG_1953.png" 
-                                                >
-                                                    <img src="./images/FERMETURES_EXTÉRIEURES/GRILLES_BIJOUTIER/_MG_1953.png" alt="Skaterboy" />
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="brick folio-item">
-                                            <div class="item-wrap">
-                                                <a 
-                                                    data-fancybox = "gallery2"
-                                                    href="./images/FERMETURES_EXTÉRIEURES/GRILLES_BIJOUTIER/_MG_7534.png" 
-                                                >
-                                                    <img src="./images/FERMETURES_EXTÉRIEURES/GRILLES_BIJOUTIER/_MG_7534.png" alt="Skaterboy" />
-                                                </a>
-                                            </div>
+                                            <a 
+                                                data-fancybox = "gallery2"
+                                                href="./images/FERMETURES_EXTÉRIEURES/GRILLES_BIJOUTIER/_MG_7534.png" 
+                                            >
+                                                <img src="./images/FERMETURES_EXTÉRIEURES/GRILLES_BIJOUTIER/_MG_7534.png" alt="Skaterboy" />
+                                            </a>
                                         </div>
                                         
-                                        
+
                                     </div>
                                 </div>
                             </section>
@@ -693,6 +700,13 @@
                 </div>
 
             </section>
+
+            <div id="go-top">
+                <a class="smoothscroll" title="Back to Top" href="#home">
+                  <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+                </a>
+            </div>
+            
         </footer>
 
     </main>
