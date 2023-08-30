@@ -66,7 +66,7 @@ new MTLLoader().setPath('assets/obj/Arkadin/').load('BATIS.mtl', function (mater
             scene.add(model)
             habillagelabel.position.set(0.22, 0.6 - 0.2, 0.42)
             scene.add(habillagelabel)
-            baielabel.position.set(0.7, 0.02 - 0.2, 0.3)
+            baielabel.position.set(0.685, 0.02 - 0.2, 0.26)
             scene.add(baielabel)
             gardelabel.position.set(-0.15, -0.24 - 0.2, 0.58)
             scene.add(gardelabel)
