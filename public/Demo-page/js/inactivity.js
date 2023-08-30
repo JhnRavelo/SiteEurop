@@ -1,3 +1,4 @@
+const logoutBtn = document.querySelector('.logout')
 const sessionFetch = async(url) => {
     const response = await fetch(`/${url}`)
            .then(response => {
@@ -30,3 +31,7 @@ document.addEventListener('mousemove', checkActivity);
 document.addEventListener('click', checkActivity);
 document.addEventListener('touchmove', checkActivity);
 checkActivity();
+logoutBtn.addEventListener('click',()=>{
+  sessionFetch('auth/logout')
+  window.location.href = '/'
+})

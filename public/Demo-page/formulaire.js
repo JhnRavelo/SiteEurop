@@ -1,3 +1,5 @@
+import { createToast, removeToast } from "./js/toastNotification.js";
+
 const acceptCheckbox = document.getElementById('acceptCheckbox')
 const submitBtn = document.getElementById('submitBtn')
 var enable = true,
@@ -26,7 +28,7 @@ const section = document.querySelector('#form'),
 loginBtn.addEventListener('click', () => {
     loginForm.classList.add('visible'), registerForm.classList.add('invisible')
 })
-console.log(userLogout);
+// console.log(userLogout);
 registerBtn.addEventListener('click', () => {
     loginForm.classList.remove('visible'), registerForm.classList.remove('invisible')
 })
@@ -52,10 +54,17 @@ window.addEventListener('load',async()=>{
     console.log('Load');
     var res = await sessionFetch('auth')
     if(res){
-        userLogout.classList.toggle('connected')
+        userLogout.classList.add('connected')
     }
 })
 // ---------affichage icon user si connecter-------
+
+// --------------add toast-----------
+const notifications = document.createElement('ul')
+    notifications.className = 'notifications'
+    document.body.appendChild(notifications)
+
+// --------------add toast-----------
 
 // -------------show Modal---------------
 let btnText = document.querySelector('.btn-text'),
@@ -328,7 +337,7 @@ submitBtn.addEventListener('click', async (e) => {
             null,
             'auth'
         )
-        // console.log(data1)
+        console.log(data1)
         const data3 = await loginFetch(
             nom.textContent,
             mail.textContent,
@@ -347,9 +356,28 @@ submitBtn.addEventListener('click', async (e) => {
             'page'
         )
         // console.log(data2)
-
-        if (data3) {
-            userLogout.classList.toggle('connected')
+            
+        if (data3 && data1) {
+            createToast('success__create__account',notifications)
+            userLogout.classList.add('connected')
+            var suprrToast = document.querySelector('.supprToast')
+            // var notifications = document.querySelector('.notifications')
+        //     suprrToast.forEach(toast=>{
+        //         toast.addEventListener('click',()=>{
+        //         removeToast(notifications)
+        //     })
+        // })
+            modalClose()
+        }else if(data3 && !data1) {
+            createToast('success__add__product',notifications)
+            userLogout.classList.add('connected')
+        //     var suprrToast = document.querySelector('.supprToast')
+        //     // var notifications = document.querySelector('.notifications')
+        //     suprrToast.forEach(toast=>{
+        //         toast.addEventListener('click',()=>{
+        //         removeToast(notifications)
+        //     })
+        // })
             modalClose()
         }
     }
@@ -377,7 +405,15 @@ loginSubmit.addEventListener('click', async (e) => {
             errorShake(4)
         }
         if (isError) {
+            createToast('success__connect',notifications)
             userLogout.classList.toggle('connected')
+        //     var suprrToast = document.querySelectorAll('.supprToast')
+        //     // var notifications = document.querySelector('.notifications')
+        //     suprrToast.forEach(toast=>{
+        //         toast.addEventListener('click',()=>{
+        //         removeToast(notifications)
+        //     })
+        // })
             modalClose()
         }
     }

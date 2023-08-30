@@ -6,11 +6,48 @@
 const loginLogout = document.querySelector(".login__logout")
 const userIcon = document.querySelector(".userIcon")
 const logout = document.querySelector(".logout")
+const body = document.querySelector('body')
+
+
+
+// const overlayLog = document.createElement("div")
+// overlayLog.className = 'overlayLog'
+
+// document.body.appendChild(overlayLog)
+
+// overlayLog.addEventListener('click',() => {
+// 	console.log('click');
+// 	// var log = document.querySelector('.showed')
+// 	if(logout.classList.contains('showed')){
+// 		logout.classList.remove("showed")
+// 		overlayLog.classList.remove('visible')
+// 	}
+	
+// })
+// body.addEventListener('click', (e)=>{
+// 	if(e.target )
+// })
 
 userIcon.addEventListener("click", () => {
-	logout.classList.toggle("showed")
+	logout.classList.toggle("showed");
+	// overlayLog.classList.toggle('visible')
+
 })
 // ------------------------------------ LOGIN LOG OUT ----------------------------------------
+var offIcon = function() {
+	var icon = $('.userIcon'),
+		logout = $('.logout'),
+		outBody = $('body')
+
+		outBody.on('click', function(e){
+			console.log('click');
+			if( !$(e.target).is('.userIcon, .logout, .use__icon') ) {
+				logout.removeClass('showed');
+			}
+		})
+
+}
+
 
    var ssOffCanvas = function() {
 
@@ -473,6 +510,7 @@ userIcon.addEventListener("click", () => {
 		ssContactForm();
 		ssAjaxChimp();
 		ssBackToTop();
+		offIcon();
 
 	})();
  
