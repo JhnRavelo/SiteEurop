@@ -18,12 +18,15 @@ const section = document.querySelector('#form'),
     prevButton = document.querySelector('.btn-prec'),
     registerForm = document.querySelector('.register-form'),
     loginBtn = document.querySelector('.login'),
-    registerBtn = document.querySelector('.register')
+    registerBtn = document.querySelector('.register'),
+    divCheck = document.querySelector('.check'),
+    userLogout = document.querySelector('.login__logout'),
+    logoutBtn = document.querySelector('.logout')
 
 loginBtn.addEventListener('click', () => {
     loginForm.classList.add('visible'), registerForm.classList.add('invisible')
 })
-
+console.log(userLogout);
 registerBtn.addEventListener('click', () => {
     loginForm.classList.remove('visible'), registerForm.classList.remove('invisible')
 })
@@ -36,17 +39,24 @@ selectBtn.addEventListener('click', () => {
 })
 
 // -------------deconnexion-----------
-headerLogo.forEach((head) => {
-    head.addEventListener(
-        'click',
-        async () => {
-            sessionFetch('auth/logout')
-            window.location.href = '/'
-        },
-        false
-    )
-})
+logoutBtn.addEventListener('click',async () => {
+    sessionFetch('auth/logout')
+    window.location.href = '/'
+},
+false
+)
 // -------------deconnexion-----------
+
+// ---------affichage icon user si connecter-------
+window.addEventListener('load',async()=>{
+    console.log('Load');
+    var res = await sessionFetch('auth')
+    if(res){
+        userLogout.classList.toggle('connected')
+    }
+})
+// ---------affichage icon user si connecter-------
+
 // -------------show Modal---------------
 let btnText = document.querySelector('.btn-text'),
     itemsText = document.querySelectorAll('.item-text')
@@ -63,6 +73,7 @@ showBtn.forEach((btnShow) => {
 
         if (res) {
             loginForm.classList.remove('visible')
+            divCheck.style.display = 'none'
             nom.textContent = res.name
             mail.textContent = res.eMail
             phone.textContent = res.phone
@@ -338,6 +349,7 @@ submitBtn.addEventListener('click', async (e) => {
         // console.log(data2)
 
         if (data3) {
+            userLogout.classList.toggle('connected')
             modalClose()
         }
     }
@@ -365,6 +377,7 @@ loginSubmit.addEventListener('click', async (e) => {
             errorShake(4)
         }
         if (isError) {
+            userLogout.classList.toggle('connected')
             modalClose()
         }
     }

@@ -22,9 +22,17 @@
   margin-bottom: 5px;
 }
 
-.pre-info i {
+.pre-info i,
+.fields i {
   color: var(--orange);
   margin: 10px;
+  font-size: 15px;
+}
+
+.pre-info i:hover,
+.fields i:hover {
+  transform: scale(1);
+  cursor: default;
 }
 
 .pre-info p {
